@@ -1,6 +1,6 @@
 <header class="banner">
   <div class="container align-items-center">
-    <a class="brand" href="{{ esc_url(home_url('/')) }}">{{ bloginfo('name') }}></a>
+    <a class="brand" href="{{ esc_url(home_url('/')) }}">{{ bloginfo('name') }}</a>
     <nav class="nav-primary">
       <!-- Burger Toggle -->
       <i class="burger-toggle" role="button" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
@@ -11,7 +11,7 @@
       <!-- Partners -->
       <div class="ami--logo">
         <a href="https://www.ami.swiss/physics/en/groups/smart-energy-materials/" target="_blank">
-          <img class="img-fluid" src="{{ get_stylesheet_directory_uri() }}>/dist/images/ami.png" alt="">
+          <img class="img-fluid" src="{{ get_stylesheet_directory_uri() }}/dist/images/ami.png" alt="">
         </a>
         <a href="https://sites.utu.fi/smat/" target="_blank">
           <img class="img-fluid" src="https://jovanamilic.com/wp-content/uploads/2025/04/logo.png">
@@ -27,8 +27,8 @@
       </div>
       <!-- Mobile Nav -->
       <div class="offcanvas-body h-100">
-        @if (has_nav_menu('primary_navigation')) :
-        wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav'])
+        @if (has_nav_menu('primary_navigation'))
+          {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav', 'echo' => false]) !!}
         @endif
       </div>
     </div>
